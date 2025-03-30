@@ -1,0 +1,4 @@
+services:
+  KimaiPlugin\EventMailerBundle\EventSubscriber\TaskEventSubscriber:
+    tags:
+      - { name: kernel.event_subscriber }

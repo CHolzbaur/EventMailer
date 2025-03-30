@@ -1,0 +1,20 @@
+{
+    "name": "kimai-plugin/event-mailer-bundle",
+    "description": "Kimai2 Plugin zum Versand von E-Mails bei Aufgaben-Zuweisung",
+    "type": "kimai-plugin",
+    "require": {
+        "php": ">=7.4",
+        "symfony/framework-bundle": "^4.4 || ^5.0 || ^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "KimaiPlugin\\EventMailerBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "kimai-plugin": {
+            "name": "EventMailerBundle",
+            "version": "1.0.0"
+        }
+    }
+}

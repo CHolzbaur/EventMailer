@@ -1,0 +1,13 @@
+plugin_event_mailer:
+  title: 'Aufgaben-Mailer'
+  icon: 'mail'
+  fields:
+    task_mailer_base_url:
+      type: text
+      label: 'Basis-URL für Aufgaben-Link'
+      help: 'z.B. https://kimai.deine-domain.de'
+      default: 'https://kimai.deine-domain.de'
+    send_task_assignment_mail:
+      type: checkbox
+      label: 'E-Mail bei Aufgaben-Zuweisung senden'
+      default: true
