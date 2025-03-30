@@ -2,7 +2,7 @@
 
 **Ein Kimai2-Plugin zum automatischen E-Mail-Versand bei Aufgaben-Zuweisung.**
 
-## ✨ Funktionen
+## Funktionen
 
 - Sendet eine E-Mail an den Benutzer bei Events - z.B. wenn ihm eine Aufgabe zugewiesen wird
 - Berücksichtigt granulare E-Mail-Versand-Regeln:
@@ -12,13 +12,13 @@
 - Verwendet Symfony Mailer und Kimai's bestehende Mailkonfiguration (`.env`)
 - Konfigurierbar über das Kimai-Backend (System > Einstellungen)
 
-## ⚙️ Voraussetzungen
+## Voraussetzungen
 
 - **Kimai2 >= 1.13**
 - PHP >= 7.4
 - Mailversand muss in `.env` korrekt konfiguriert sein (z. B. `MAILER_DSN`)
 
-## 🧩 Optional: Custom Fields Plugin
+## Optional: Custom Fields Plugin
 
 Dieses Plugin **benötigt das separate, kostenpflichtige Plugin Kimai Custom Fields Plugins falls man Einstellungen für User und Tätigkeiten verwenden möchte**:
 
