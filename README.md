@@ -1,38 +1,42 @@
 # EventMailerBundle
 
-** ACHTUNG: Das Plugin ist aktuell noch für Lernzwecke gedacht für mich selbst. Es funktioniert noch nicht. Falls ich das Plugin zum laufen bekomme entferne ich diesen Hinweis**
+**ATTENTION: This plugin is currently intended solely for learning purposes for my own use. It does not yet function. If I manage to get the plugin running, I will remove this notice.**
 
-**Ein Kimai2-Plugin zum automatischen E-Mail-Versand bei Aufgaben-Zuweisung.**
+**A Kimai2 plugin for the automatic dispatch of emails upon task assignment.**
 
-## Funktionen
+## Features
 
-- Sendet eine E-Mail an den Benutzer bei Events - z.B. wenn ihm eine Aufgabe zugewiesen wird
-- Berücksichtigt granulare E-Mail-Versand-Regeln:
-  - Nur bestimmte Tätigkeiten (Activities)
-  - Nur bestimmte Benutzer (User)
-- Sofortiger Versand beim Zuweisungsevent (`TaskUpdateEvent`)
-- Verwendet Symfony Mailer und Kimai's bestehende Mailkonfiguration (`.env`)
-- Konfigurierbar über das Kimai-Backend (System > Einstellungen)
+- Sends an email to the user on events – e.g., when a task is assigned to them.
+- Applies granular email dispatch rules:
+  - Only for specific activities
+  - Only for specific users
+- Immediate dispatch triggered by the assignment event (`TaskUpdateEvent`)
+- Utilizes Symfony Mailer and Kimai’s existing mail configuration (from `.env`)
+- Configurable via the Kimai backend (System > Settings)
 
-## Voraussetzungen
+## Requirements
 
 - **Kimai2 >= 1.13**
 - PHP >= 7.4
-- Mailversand muss in `.env` korrekt konfiguriert sein (z. B. `MAILER_DSN`)
+- Email sending must be correctly configured in `.env` (e.g., `MAILER_DSN`)
 
 ## Optional: Custom Fields Plugin
 
-Dieses Plugin **benötigt das separate, kostenpflichtige Plugin Kimai Custom Fields Plugins falls man Einstellungen für User und Tätigkeiten verwenden möchte**:
+This plugin **requires the separate, paid Kimai Custom Fields Plugin if you want to use settings for users and activities**:
 
-- **Benutzer-Flag:**  
-  Wenn die Meta-Definition `mail_for_user` existiert, wird nur dann eine E-Mail versendet, wenn ein Benutzer unter `Benutzereinstellungen` → `mail_for_user = 1` gesetzt ist.
-  > Tabelle: `kimai2_user_preferences`
+- **User Flag:**  
+  If the meta definition `mail_for_user` exists, an email is sent only if a user has set `mail_for_user = 1` in their user preferences.  
+  > Table: `kimai2_user_preferences`
 
-- **Aktivitäts-Flag:**  
-  Wenn die Meta-Definition `mail_for_activity` existiert, wird nur dann eine E-Mail versendet, wenn die jeweilige Aktivität unter `Aktivitätseinstellungen` → `mail_for_activity = 1` gesetzt ist.
-  > Tabelle: `kimai2_activities_meta`
+- **Activity Flag:**  
+  If the meta definition `mail_for_activity` exists, an email is sent only if the respective activity has set `mail_for_activity = 1` in its activity settings.  
+  > Table: `kimai2_activities_meta`
 
 - **Fallback:**  
-  Wenn die Meta-Feld-Definitionen (`kimai2_meta_field_rules`) **nicht existieren**, werden **alle Benutzer und Tätigkeiten** berücksichtigt.
+  If the meta field definitions (`kimai2_meta_field_rules`) **do not exist**, then **all users and activities** are considered.
 
-Das Plugin **funktioniert auch ohne Custom Fields Plugin**, aber dann gibt es keine Filterung.
+The plugin **also works without the Custom Fields Plugin**, but then no filtering is applied.
+
+## Optional: Tasks Plugin
+
+This plugin has most value when used toghether with **the separate, paid Kimai Tasks Plugin**. This will be at least my usage for this plugin.
