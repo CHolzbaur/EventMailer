@@ -1,5 +1,7 @@
 # EventMailerBundle
 
+** ACHTUNG: Das Plugin ist aktuell noch für Lernzwecke gedacht für mich selbst. Es funktioniert noch nicht. Falls ich das Plugin zum laufen bekomme entferne ich diesen Hinweis**
+
 **Ein Kimai2-Plugin zum automatischen E-Mail-Versand bei Aufgaben-Zuweisung.**
 
 ## Funktionen
